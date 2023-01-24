@@ -14,7 +14,4 @@ io.on("connection", (socket) => {
     io.to(users[event]).emit("message", message, sender);
   });
 });
-const port = process.env.PORT || 10000;
-server.listen(port, function hostname() {
-  console.log(`listening on: ${port}`);
-});
+
