@@ -2,10 +2,11 @@ const server = require("http").createServer();
 const io = require("socket.io")(10003, {
   cors: { origin: "*" },
 });
-console.log("test");
+
 var users = [];
 
 io.on("connection", (socket) => {
+  console.log("test");
   socket.on("connected", (userID) => {
     users[userID] = socket.id;
     console.log("wow" + users[userID]);
