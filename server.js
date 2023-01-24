@@ -1,5 +1,5 @@
 const server = require("http").createServer();
-const io = require("socket.io")(10003, {
+const io = require("socket.io")(10000, {
   cors: { origin: "*" },
 });
 
