@@ -1,8 +1,8 @@
 const server = require("http").createServer();
-const io = require("socket.io")(10002, {
+const io = require("socket.io")(10003, {
   cors: { origin: "*" },
 });
-
+console.log("test");
 var users = [];
 
 io.on("connection", (socket) => {
